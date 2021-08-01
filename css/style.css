@@ -1,0 +1,626 @@
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #dce2e685;
+    font-family: 'Cairo', sans-serif;
+    
+
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+} 
+/* small */
+@media (min-width:768px){   
+.container{
+    width: 750px;
+          }
+    
+  
+}
+header{
+position: absolute;
+left: 0%;
+top: 0%;
+width: 100%;
+z-index: 3;
+
+
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: solid 2px rgb(228, 193, 193);
+    min-height: 70px;
+}
+header .container .brand{
+    color:rgb(173, 196, 196);
+    font-size: 50px;
+}
+header .container nav{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .container nav .toogle{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+
+}
+header .container nav ul{
+    display: flex;
+}
+header .container nav ul li a.active,
+header .container nav ul li a:hover{
+    color:white;
+    border:2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: rgb(19, 153, 206); 
+}
+
+header .container nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: rgb(238, 234, 234);
+    font-weight: bold;
+    padding: 15px 20px;
+   
+}
+/*media of screen between 360 and 760 */
+@media(min-width:360px),(max-width: 760px)
+{
+    header .container nav ul{
+        display: none;
+    } 
+    header .container nav .toogle{
+        display: flex;
+        color:rgb(250, 244, 244);
+    }
+
+    header .container nav ul.show{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    width: 100%;
+    margin-top: 3px;
+    text-align: center;
+    margin-bottom: 50px;
+    }
+   
+}
+/* }End media of screen between 360 and 760 */
+
+/* larg */
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+    header .container nav .toogle{
+        display: none;
+        color:rgb(250, 244, 244);
+    }/*hidden the toogle on lrager screen */
+    header .container nav ul{
+        
+        display:flex;
+        top:10%;
+        left:50%;
+        float: right;
+        text-align: left;
+        flex-direction: row;
+
+    }/*  Desplay The navbar on the larger than meduim screen */
+    nav ul li a.active,nav ul li a:hover{
+        color:white;
+        border:2px solid rgb(0, 0, 0);
+        border-radius: 30px;
+        background-color: rgb(19, 153, 206); 
+    
+    }    
+
+}/*End larg screen*/
+/*End larg srcreen*/
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/*End header*/
+/* start slider */
+.slider1{
+    height: 100vh;
+    background-image: url(../images/slider1.jpg);
+   background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+ .slider2{
+    height: 100vh;
+    background-image: url(../images/slider2.jpg);
+   background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.slider3{
+    height: 100vh;
+    background-image: url(../images/slider3.png);
+   background-repeat: no-repeat;
+  background-size: 100% 100%;
+} 
+.slider .overley{
+position: absolute;
+left: 0%;
+top: 0%;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.705);
+}
+.slider .text{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color:white;
+    background-color:  rgba(19, 153, 206, 0.76); 
+    padding: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.705);
+    border-radius: 30px 60px;
+    
+}
+.slider .text p{
+    padding-top: 10px;
+    line-height: 1.5;
+}
+/*For Mobile and Tab sreen */
+@media(max-width:760px){
+    .slider .text{
+        width: 100%;
+        top:60%;
+    } 
+}
+/*End Media*/
+.slider .fas{
+    position: absolute;
+    top:50%;
+    color: white;
+    background-color: teal;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    /* transform: translate(-50%,-50%); */
+
+}
+/*For Mobile and Tab sreen */
+@media(max-width:760px){
+    .slider .fas{
+        display: none;
+    }
+}
+/*End Media*/
+.slider .fa-angle-double-right{
+    right: 30px;
+   
+}
+.slider .fa-angle-double-left{
+    
+    left:  30px;
+}
+.slider .ball{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider .ball li{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.slider .ball .active{
+    background-color: tomato;
+}
+/* End slider */
+
+ /* Start services */
+ .services{
+     margin-top: 30px;
+     margin-bottom:30px;
+ 
+ }
+ .services .text{
+    text-align: center;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2;
+    font-size:20px;
+}
+/*Tab screen*/
+@media (max-width:990px){
+    .services .text{
+       width: 100%;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    } 
+}
+/*End media of tab screen*/
+ .services .text h2{
+     text-transform:uppercase;
+     margin-bottom: 5px;
+ }
+ .services .text h2::after{
+    content: "";
+    width:120px;
+    height: 3px;
+    background-color: black;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top:115%;
+}
+@media(max-width:990px){
+    .services .text h2::after{
+        width:110px;
+        top:114%;
+    }
+}
+@media(max-width:768px){
+    .services .text h2::after{
+        width:110px;
+        top:111%;
+    }  
+}
+.services .inner_services{
+    display:flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.services .inner_services .myServices{
+    background-color: rgba(255, 248, 220, 0.671);
+    padding: 30px;
+    text-align: center;
+    margin-left:10px ;
+    border-radius: 30px;
+    box-shadow: rgba(162, 184, 185, 0.795) 5px 5px 5px;
+    transition: all 0.5s;
+     width:calc(25% - 10px); 
+}
+/*Start Tab screen  */
+@media (max-width:990px){
+    .services .inner_services .myServices{
+        width: calc(50% - 10px);
+        margin-bottom: 30px;
+    } 
+}/*/*Start Tab screen  */
+
+/*Start Mobile screen*/
+@media (max-width:570px){
+    .services .inner_services .myServices{
+        width: calc(100% - 10px);
+        margin-bottom: 30px;
+    } 
+}
+/*End Mobile screen*/
+.services .inner_services .myServices:hover{
+    transform: translateY(-20px);   
+    box-shadow: rgba(0, 174, 255, 0.856) 5px 5px 5px;
+    
+}
+.services .inner_services .myServices img{
+      width:100px;
+}
+.services .myServices p{
+    line-height: 1.5;
+}
+.services .inner_services .myServices h3{
+   margin-top: 10px;
+   margin-bottom: 5px;
+}
+/*End services*/
+
+/*Start Contact */
+ .ContactUs{
+     padding-left:0;
+     padding-right:0;
+     margin-left:0px !important;
+     margin-top:30px;
+     width:100%; 
+   
+ }
+.ContactUs .ConT{
+    display:flex;
+    flex-wrap: wrap;
+}
+.ContactUs .ConT .content{
+   width:50%;
+   height:100%;
+   margin:0;
+   padding:0;
+   
+}
+@media(max-width:990px)
+{
+.ContactUs .ConT .content{
+    width:100%;
+    }
+}
+.content h2{
+    padding-top:30px;
+    margin-left:30px;
+}
+form{
+    display:flex;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+    width:100%;
+    padding-top:30px; 
+    padding-right:30px;
+}
+.content .myform{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+   
+  
+}
+.content .myform .formContent{
+    margin-left:30px;
+    width:calc(50% - 30px);
+    /* margin-bottom:10px; */
+}
+@media (max-width:768px){
+    .content .myform .formContent{
+        margin-left:30px;
+        width:calc(100% - 30px);
+        margin-bottom:10px;
+    }
+}
+.content .myform .Message{
+    width:100%;
+    margin-left:30px;
+}
+textarea {
+    resize: none;
+    border: solid #e1e1e1 1px;
+    width:100%;
+    background: white;
+    min-height: 30px;
+    padding: 5px 20px;
+    line-height: normal;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #737373;
+  }
+input{
+    border: solid #e1e1e1 1px;
+    width:100%;
+    background: white;
+    min-height: 30px;
+    padding: 5px 20px;
+    line-height: normal;
+    border-radius: 0px;
+    font-size: 14px;
+    color: #737373;
+}
+.btn , .butt{
+    margin-left: auto;
+    border:0;
+    border-radius: 0 25px;
+    background-color:#22c2e6;
+    width:300px;
+    height:50px;
+    padding: .7rem 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+}
+.btn, .butt:hover {
+    opacity: .8;
+}
+/*End Contact*/
+
+/*
+Start Address
+*/
+.Address{
+    margin-top: 50px;
+    margin-bottom:50px;
+}
+.Address .myaddress{
+    display: flex;
+    width:100%;
+    flex-wrap:wrap;
+}
+.Address .myaddress .content{
+    width:33%;
+    text-align:center;
+    padding:30px;
+}
+.Address .myaddress .content h3{
+    padding-top:5px;
+    padding-bottom:5px
+}
+
+/*
+End Address
+*//* Start Images*/
+.container .myimage{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    align-items:center;
+    margin-left:auto;
+    margin-right:auto; 
+   
+}
+.container .images{
+    width:calc(33% - 40px);
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom: 20px;
+   
+}
+@media(max-width:990px){
+    .container .images{
+        width:calc(50% - 40px); } 
+}
+@media(max-width:768px){
+    .container .images{
+        width:calc(100% - 40px); } 
+}
+.container .images img{
+    height:300px;
+    width:100%;
+}
+.container .myimage button{
+    padding-bottom:20px;
+    margin-bottom:20px;
+}
+/* End Images*/
+/*Start About */
+.about{
+    margin-top:0px;
+    background-color: rgb(14, 160, 204); 
+    
+
+}
+.about .info{
+    display:flex;
+    flex-wrap: wrap;  
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+}
+.about .info .myinfo{
+    margin-bottom: 0;
+    margin-right: 20px;
+    text-align: center;
+    width:calc(25% - 20px); 
+    
+}
+.about .info .myinfo ul{
+    text-align: center;
+}
+/*Media for Tab srceen*/
+@media (max-width:990px){
+    .about .info .myinfo{
+        width: calc(50% - 20px);
+        margin-bottom: 30px;
+    } 
+}
+/*End media for tab screen*/
+/*Start Mobile screen*/
+@media (max-width:570px){
+    .about .info .myinfo{
+        width: calc(100% - 20px);
+        margin-bottom: 30px;
+    } 
+}
+
+.about .info .brand{
+   
+    color:rgb(0, 0, 0);
+    font-size: 80px; 
+}
+.about .info .myinfo h4{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+.about .info .mycontact ul,h4{
+    text-align:left;
+    line-height:2;
+}
+.about .info .myinfo ul,h4{
+    text-align:left;
+    line-height:2;
+}
+/*media*/
+@media (max-width:990px){
+    .about .info .myinfo ul,h4{
+        text-align:center;
+    } 
+}
+/*End media */
+.about .info .myself{
+    text-align:left;
+}
+@media (max-width:990px){
+    .about .info .myself{
+        text-align:center;
+    } 
+}
+.fa-facebook-square,.fa-twitter-square,.fa-linkedin{
+    font-size: 25px;
+    color:rgb(2, 2, 2);
+    /* background-color: floralwhite; */
+}
+.about .info .myinfo .Social li{
+    margin-top: 2px;
+    font-size: 20px;
+}
+.about .info .myinfo .cont li{
+    margin-top: 2px;
+    font-size: 17px;
+    text-align: left;
+}
+@media (max-width:990px){
+    .about .info .myinfo .cont li{
+        text-align:center;
+    } 
+}
+.about .info .myinfo ul li label{
+    font-weight: bold;
+}
+
+/*End About*/
+/*Start footer */
+.foot{ 
+    width:100%;
+    height: 80px;
+    background-color: rgb(1, 92, 128); 
+    margin-top:0px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+footer .text{
+     line-height: 80px;
+    color:white;
+    font-weight: bold;
+  
+}

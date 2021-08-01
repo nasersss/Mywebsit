@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('#icon').click(function(){
+                $('ul').toggleClass('show');
+              });
+          });
+
+          $(".col").slice(0, 3).show()
+        $(".btn").on("click", function(){
+            $(".col:hidden").slice(0, 3).slideDown()
+            if ($(".col:hidden").length == 0) {
+                $(".btn").fadeOut('slow')
+            }
+        })
+      </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <i class="fab fa-css3-alt brand"></i>            </a>
+            <nav>
+                <i id="icon" class="fas fa-bars toogle"></i>
+                <ul>
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a class="active" href="Picture.html">Picture</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!--End header-->
+        <!-- Start slider -->
+        <div class="slider3">
+        <div class="slider">
+            <div class="overley">
+                <div class="text">
+                    <div class="content">
+                        <h2>This is some Picture  
+                        </h2>
+                        <p>
+                            We creat application and solve coding and application prblem also we trains student 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <i class="fas fa-angle-double-right"></i>
+            <a href="contact.html"><i class="fas fa-angle-double-left"></i></a> 
+            <ul class="ball">
+                <li ></li>
+                <li ></li>
+                <li class="active"></li>
+            </ul>
+        </div>
+    </div>
+      <!-- End slider -->
+<!--Start Gallery page -->
+      <div class="container">
+          <div class="myimage">
+                <div class="images">
+                    <img src="images/computer/1.jpg" alt="images"/>
+                </div>
+                <div class="images">
+                    <img src="images/computer/3.png" alt="images"/>
+                </div>
+                <div class="images">
+                    <img src="images/computer/4.png" alt="images"/>
+                </div>
+                <div class="images">
+                    <img src="images/computer/10.jpg" alt="images"/>
+                </div>
+                <div class="images">
+                    <img src="images/computer/9.jpg" alt="images"/>
+                </div>
+                <div class="images">
+                    <img src="images/computer/6.jpg" alt="images"/>
+                </div>
+                <div class="images">
+                    <img src="images/computer/7.jpg" alt="images"/>
+                </div>
+                <div class="images">
+                    <img src="images/computer/8.jpg" alt="images"/>
+                </div>
+                <div class="images">
+                    <img src="images/computer/6.jpg" alt="images"/>
+                </div>
+                <button class="btn">Load More</button>
+              </div>
+        </div>
+
+<!--Start Gallery page -->
+
+      <!--Start About section-->
+    <div class="about">
+        <div class="container">
+            <div class="info">
+
+                <div class="myinfo">
+                    <h4 style="text-align:center;" >My Web Sit</h4>
+                    <i class="fab fa-css3-alt brand"></i> </a>
+                </div>
+                <div class="myinfo">
+                    <h4>My Social-Media</h4>
+                    <ul class="Social">
+                        <li><a href=""> <i class="fab fa-facebook-square"></i> Facebook</a></li>
+                       <li><a href="">  <i class="fab fa-twitter-square"></i> Twitter</a></li>
+                       <li><a href=""> <i class="fab fa-linkedin"></i> linkedin</a></li>
+                   </ul>
+                </div>
+                <div class="myinfo mycontact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><label >E-mail : </label> eng.nasser2022@gmail .com</li>
+                        <li><label>Tel : </label> +967775459160</li>
+                        <li><label >What's : </label> +9677351788417</li>
+                        <li> </li>
+                    </ul>                </div>
+                <div class="myinfo myself">
+                    <h4>About</h4>
+                    <p>
+                        My name is nasser I live im Yemen.I love programming.
+                        By the way, I study programming for more than 6 hours.
+                        So,I hope become professionla web developer.    
+                    </p>
+                </div>
+             </div> 
+        </div>
+    </div>
+    <!--End About section-->
+
+    <!--Start Footer-->
+    <footer class="foot">
+        <div class="text">ALGaithSoft &copy; 2021. All Rights Reserved.</div>
+    </footer>
+     <!--End footer Footer-->
+</body>
+</html>
