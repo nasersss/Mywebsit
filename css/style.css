@@ -287,7 +287,7 @@ background-color: rgba(0, 0, 0, 0.705);
 @media(max-width:990px){
     .services .text h2::after{
         width:110px;
-        top:100%;
+        top:114%;
     }
 }
 @media(max-width:768px){
