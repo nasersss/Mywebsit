@@ -273,8 +273,10 @@ background-color: rgba(0, 0, 0, 0.705);
  .services .text h2{
      text-transform:uppercase;
      margin-bottom: 5px;
+     text-decoration: underline;
+     font-weight: bold;
  }
- .services .text h2::after{
+ /* .services .text h2::after{
     content: "";
     width:120px;
     height: 3px;
@@ -295,7 +297,7 @@ background-color: rgba(0, 0, 0, 0.705);
         width:110px;
         top:111%;
     }  
-}
+} */
 .services .inner_services{
     display:flex;
     margin-top: 20px;
@@ -470,42 +472,26 @@ Start Address
     padding-bottom:5px
 }
 
-/*
-End Address
-*//* Start Images*/
-.container .myimage{
-    display:flex;
-    flex-wrap:wrap;
-    width:100%;
-    align-items:center;
-    margin-left:auto;
-    margin-right:auto; 
-   
+/*End Address */
+/*Start Courses*/
+.container .card{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    }
+.container .card-deck .meCard:hover{
+    transform:scale(0.9);
+    box-shadow: #22c2e6 5px 5px 5px;
+    transition: all 0.6s;
 }
-.container .images{
-    width:calc(33% - 40px);
-   margin-left: 20px;
-   margin-right: 20px;
-   margin-bottom: 20px;
-   
+.container .card-deck .meCard h5{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
 }
-@media(max-width:990px){
-    .container .images{
-        width:calc(50% - 40px); } 
-}
-@media(max-width:768px){
-    .container .images{
-        width:calc(100% - 40px); } 
-}
-.container .images img{
-    height:300px;
-    width:100%;
-}
-.container .myimage button{
-    padding-bottom:20px;
-    margin-bottom:20px;
-}
-/* End Images*/
+/*End Courses*/
 /*Start About */
 .about{
     margin-top:0px;
